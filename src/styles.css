@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*GENERAL*/
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/*NAV*/
+
+.h-hero {
+	height: 600px;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeOut {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
+}
+
+.image-fade-enter {
+	animation: fadeIn 1s forwards;
+}
+
+.image-fade-exit {
+	animation: fadeOut 1s forwards;
+}
