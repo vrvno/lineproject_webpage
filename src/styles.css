@@ -40,3 +40,11 @@
 .image-fade-exit {
 	animation: fadeOut 1s forwards;
 }
+
+#service-h1 {
+	background-color: #0f5a33;
+}
+
+.h-mision {
+	height: 470px;
+}
