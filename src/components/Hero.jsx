@@ -6,6 +6,13 @@ import panel from '../assets/panel.png';
 
 const images = [antena2, antena3, panel];
 
+const smoothScrollTo = (targetId) => {
+	const targetElement = document.getElementById(targetId);
+	if (targetElement) {
+		targetElement.scrollIntoView({ behavior: 'smooth' });
+	}
+};
+
 export const Hero = () => {
 	const [currentImageIndex, setCurrentImageIndex] = useState(0);
 	const [isFading, setIsFading] = useState(false);
@@ -23,7 +30,7 @@ export const Hero = () => {
 	}, []);
 
 	return (
-		<div className='w-full h-fit md:h-hero flex justify-center mb-11'>
+		<div className='w-full h-fit md:h-hero flex justify-center mb-11 md:mb-24'>
 			<div className='w-full md:w-4/5 flex flex-col md:flex-row'>
 				<div className='w-full md:w-3/5 bg-gray-100 flex flex-col justify-center items-center p-4'>
 					<h1 className='text-center md:text-start mt-5 mb-10  md:my-11 text-3xl  md:text-6xl md:px-10 tracking-wide'>
@@ -36,7 +43,8 @@ export const Hero = () => {
 					</h2>
 					<button
 						type='button'
-						className='mt-7  md:mt-16 w-36 text-base text-white bg-lime-500 hover:bg-lime-600 focus:ring-4 focus:ring-lime-300 font-medium rounded-lg px-5 py-2.5 me-2 mb-2 dark:bg-lime-500 dark:hover:bg-lime-600 focus:outline-none dark:focus:ring-lime-700'>
+						onClick={() => smoothScrollTo('contact')} // Llama a la función de desplazamiento
+						className='mt-7 md:mt-16 w-36 text-base text-white bg-lime-500 hover:bg-lime-600 focus:ring-4 focus:ring-lime-300 font-medium rounded-lg px-5 py-2.5 me-2 mb-2 dark:bg-lime-500 dark:hover:bg-lime-600 focus:outline-none dark:focus:ring-lime-700'>
 						Contacto
 					</button>
 				</div>

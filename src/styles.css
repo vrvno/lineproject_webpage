@@ -48,3 +48,11 @@
 .h-mision {
 	height: 470px;
 }
+
+.service-card {
+	width: 1600px;
+}
+
+html {
+	scroll-behavior: smooth;
+}
